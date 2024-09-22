@@ -34,14 +34,18 @@ Key concepts:
 - **Rewards**: A reward signal that encourages or discourages the rover's movements.
 - **Q-Values**: A table of learned values for each state-action pair.
 
-The rover updates its knowledge of the environment using the R-SMART update rule:
-\[ Q(s, a) \leftarrow (1 - \alpha) Q(s, a) + \alpha \left( r + \gamma \max_{a'} Q(s', a') \right) \]
+The rover updates its knowledge of the environment using the **R-SMART update rule**:
+
+Q(s, a) ← (1 - α) * Q(s, a) + α * (r + γ * max_{a'} Q(s', a'))
 
 Where:
-- \( \alpha \) is the learning rate
-- \( \gamma \) is the discount factor
-- \( r \) is the immediate reward
-- \( s \) and \( s' \) are the current and next states
+
+
+- `α` is the learning rate
+- `γ` is the discount factor
+- `r` is the immediate reward
+- `s` and `s'` are the current and next states
+
 
 ## Features
 
